@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Element Icons";
+  src: url('../assets/element-icons.woff') format('woff');
+  font-display: block;
+}
+
+:root {
+  --font-body: "OPPOSans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-numbers: Inter, "Segoe UI", system-ui, sans-serif;
+  --title-font: var(--font-body);
+  --color-canvas: #f3f6fa;
+  --color-surface: #fff;
+  --color-surface-alt: #f7f9fc;
+  --color-text: #19283d;
+  --color-muted: #586b82;
+  --color-placeholder: #75859b;
+  --color-border: #dfe7f0;
+  --color-primary: #255acb;
+  --color-primary-hover: #1d4cb3;
+  --color-primary-soft: #edf3ff;
+  --color-positive: #087c70;
+  --color-positive-soft: #e7f6f2;
+  --color-warning: #a45523;
+  --color-warning-soft: #fff2e7;
+  --color-danger: #b73543;
+  --color-danger-soft: #fff0f1;
+  --color-nav: #112238;
+  --color-nav-muted: #bbcadb;
+  --radius-panel: 16px;
+  --radius-control: 8px;
+  --shadow-panel: 0 1px 2px rgb(25 40 61 / 4%);
+  --shadow-overlay: 0 18px 50px rgb(22 36 61 / 20%);
+  --platform-header-height: 64px;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  background: var(--color-canvas);
+  color: var(--color-text);
+  color-scheme: light;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 0; }
+h1, h2, h3, p, ul, dl, dd { margin: 0; }
+ul { list-style: none; padding: 0; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { border: 0; background: transparent; padding: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button:disabled { opacity: .55; cursor: default; }
+
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+
+.element-icon { font-family: "Element Icons"; font-weight: normal; line-height: 1; }
+
+.app-stage {
+  --stage-height: 100svh;
+  min-height: var(--stage-height);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .app-stage {
+    width: var(--stage-width, 100%);
+    zoom: var(--desktop-scale, 1);
+  }
+}

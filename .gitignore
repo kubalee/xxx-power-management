@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.local
+*.log
+.env
+.env.*
+!.env.example
+
+/design/
+/design-qa.md
+/reference/
+/public/source-assets/

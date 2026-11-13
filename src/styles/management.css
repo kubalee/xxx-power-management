@@ -1,0 +1,77 @@
+.mg-card {
+  min-width: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-panel);
+}
+.mg-card + .mg-card { margin-top: 16px; }
+.mg-card-title {
+  min-height: 63px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 24px;
+  font: 650 19px/1.4 var(--title-font);
+}
+.mg-card-body { padding: 24px; min-width: 0; }
+.mg-controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.mg-controls .reset { margin-left: auto; }
+.mg-toolbar { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }
+.mg-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-text);
+  background: var(--color-surface);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.mg-button.primary { border-color: var(--color-primary); background: var(--color-primary); color: #fff; }
+.mg-button:hover:not(:disabled) { border-color: #b9cbe7; background: var(--color-surface-alt); }
+.mg-button.primary:hover:not(:disabled) { border-color: var(--color-primary-hover); background: var(--color-primary-hover); }
+.mg-link { color: var(--color-primary); font-weight: 550; }
+.mg-link:hover { text-decoration: underline; }
+.mg-muted { color: var(--color-muted); }
+.mg-breadcrumb { min-height: 46px; display: flex; align-items: center; flex-wrap: wrap; gap: 7px; padding: 8px 2px; font-size: 13px; }
+.mg-breadcrumb > span { color: var(--color-muted); }
+.mg-form { padding: 18px 24px 24px; }
+.mg-form .mg-field { margin-bottom: 16px; width: 100%; }
+.mg-form .mg-field-label { width: 76px; text-align: right; color: var(--color-muted); font-size: 14px; }
+.mg-form .mg-control { flex: 1; }
+.mg-form .mg-error { margin: 0 0 10px 88px; }
+.mg-error { color: var(--color-danger); }
+.mg-selection {
+  appearance: none;
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid #aab9cd;
+  border-radius: 4px;
+  background: var(--color-surface);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.mg-selection:checked { border-color: var(--color-primary); background: var(--color-primary); }
+.mg-selection:checked::after { content: '\e6da'; color: #fff; font: 11px "Element Icons"; }
+.mg-empty { color: var(--color-muted); text-align: center; padding: 28px 14px; }
+.mg-confirm { padding: 18px 24px 26px; }
+
+@media (max-width: 1023px) {
+  .mg-card-title { padding-inline: 14px; min-height: 52px; font-size: 16px; }
+  .mg-card-body { padding: 14px; }
+  .mg-controls { gap: 10px; }
+  .mg-controls .reset { margin-left: 0; }
+  .mg-button { min-height: 44px; padding-inline: 12px; }
+  .mg-breadcrumb { padding: 8px 2px; min-height: 40px; }
+  .mg-form { padding-inline: 14px; }
+}
